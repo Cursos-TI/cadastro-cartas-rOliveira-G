@@ -106,13 +106,47 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pib_p_c2);
 
 
-    // BATALHAS DAS CARTAS
+    // BATALHAS DAS CARTAS          COMPARAÇOES UTILIZANDO IF ELSE
 
     float super1 = (float)populacao1 + area1 + pib1 + pontos_turisticos1 + pib_p_c1 + inverso_densidade1;
     float super2 = (float)populacao2 + area2 + pib2 + pontos_turisticos2 + pib_p_c2 + inverso_densidade2;
 
     printf("\nComparação de Cartas:\n\n");
+    
+        /* IF (COPARATIVO) {  
+        BLOCO DE CÓDIGO A SER RODADO  ;
+        } ELSE {
+         BLOCO DE CODIGO A SER RODADO CASO IF NÃO SIGA;
+        }*/
 
+    //COMPARAR POPULAÇAO
+
+
+    if (populacao1 > populacao2){
+        printf("No quesito população,   CIDADE 1 GANHOU !\n");
+    }else{
+        
+        printf("No quesito população,   CIDADE 2 GANHOU !\n");
+    }
+
+
+    // COMPARAR DENSIDADE POPULACIONAL 
+
+    if (densidade1 < densidade2){
+        printf("No quesito Densidade populacional,  CIDADE 1 GANHOU !\n");
+    }else{
+        printf("No quesito Densidade populacional,  CIDADE 2 GANHOU !\n");
+    }
+
+
+    //COMPARAR SUPER
+    if (super1 > super2){
+        printf("No quesito SUPER,   Cidade 1 ganhou !\n");
+    }
+    else {
+        printf("No quesito SUPER,   Cidade 2 ganhou !\n");
+    }
+/*
     printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
     printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
     printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
@@ -121,7 +155,7 @@ int main() {
     printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade1 < densidade2);
 
     printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_p_c1 > pib_p_c2);
-    printf("Super Poder: Carta 1 venceu (%d)\n", super1 > super2);
+    printf("Super Poder: Carta 1 venceu (%d)\n", super1 > super2);*/
 
     return 0;
 }
