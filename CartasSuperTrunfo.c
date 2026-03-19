@@ -119,15 +119,62 @@ int main() {
          BLOCO DE CODIGO A SER RODADO CASO IF NÃO SIGA;
         }*/
 
-    //COMPARAR POPULAÇAO
 
+    int menu;
+    printf("Menu para comparação:\n1- População\n2- Área\n3- PIB\n4- Número de pontos turísticos\nEscolha: ");
+    scanf("%d", &menu);
 
-    if (populacao1 > populacao2){
-        printf("No quesito população,   CIDADE 1 GANHOU !\n");
-    }else{
-        
-        printf("No quesito população,   CIDADE 2 GANHOU !\n");
+    switch (menu)
+    {
+
+    case 1:
+        if (populacao1 > populacao2){
+            printf("No quesito população,   %s GANHOU !\n", nome1);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome1, populacao1, nome2, populacao2);
+        }else if (populacao2 > populacao1){
+            
+            printf("No quesito população,   %s GANHOU !\n", nome2);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome2, populacao2, nome1, populacao1);
+        }else{printf("EMPATE NO QUESITO POPULAÇAO!");}
+        break;
+
+    case 2:
+        if (area1 > area2){
+            printf("No quesito Área,   %s GANHOU !\n", nome1);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome1, area1, nome2, area2);
+        }else if (area2 > area1){
+            
+            printf("No quesito Área,   %s GANHOU !\n", nome2);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome2, area2, nome1, area1);
+        }else{printf("EMPATE NO QUESITO ÁREA!!! ");}
+        break;
+
+    case 3:
+        if (pib1 > pib2){
+            printf("No quesito PIB,     %s GANHOU!\n", nome1);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome1, pib1, nome2, pib2);
+        }else if (pib2 > pib1){
+            printf("No quesito PIB,     %s GANHOU!\n", nome2);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome2, pib2, nome1, pib1);
+        }else{printf("EMPATE NO QUESITO PIB!!! ");}
+        break;
+    case 4:
+        if (pontos_turisticos1 > pontos_turisticos2){
+            printf("No quesito Número de pontos turísticos,     %s GANHOU!\n", nome1);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome1, pontos_turisticos1, nome2, pontos_turisticos2);
+        }else if (pontos_turisticos2 > pontos_turisticos1){
+            printf("No quesito Número de pontos turísticos,     %s GANHOU!\n", nome2);
+            printf("%s tem: %d, \n enquanto...\n %s tem: %d", nome2, pontos_turisticos2, nome1, pontos_turisticos1);
+
+        }else{printf("EMPATE NO QUESITO PONTOS TURÍSTICOS!!! ");}
+        break;
+    default:
+        break;
     }
+
+    /*//COMPARAR POPULAÇAO
+
+
 
 
     // COMPARAR DENSIDADE POPULACIONAL 
